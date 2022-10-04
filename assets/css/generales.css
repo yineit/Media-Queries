@@ -1,0 +1,38 @@
+@charset "UTF-8";
+/* CSS Document */
+nav {
+	padding: 10px;
+	grid-area: menu;
+	background: #0037a1;
+	color: white;
+	}
+	main {
+	grid-area: seccion-principal;
+	padding: 10px;
+	}
+	footer {
+	grid-area: pie-de-pagina;
+	background: #d02a1e;
+	color: white;
+	padding: 10px;
+	}
+
+    div {
+        display: grid;
+        border: 1px solid black;
+        grid-template-rows: 1fr 10fr 1fr;
+        grid-template-areas:
+        "menu"
+        "seccion-principal"
+        "pie-de-pagina";
+        }
+
+        @media (min-width: 992px) {
+            div{
+            grid-template-areas:
+            "menu seccion-principal"
+            "menu seccion-principal"
+            "menu pie-de-pagina";
+            grid-template-columns: 6rem 1fr;
+            }
+            }

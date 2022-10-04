@@ -1,0 +1,71 @@
+@charset "UTF-8";
+/* CSS Document */
+/* Color Texto */
+h3 { color: crimson }
+@media (min-width: 576px) {
+h3 { color: purple }
+}
+@media (min-width: 768px) {
+h3 { color: green }
+}
+@media (min-width: 992px) {
+h3 { color: chocolate }
+}
+/* Grid */
+p {
+	background: #749c2c;
+	color: white;
+	padding: 10px;
+	margin: 10px;
+	}
+	.grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	}
+
+	@media (min-width: 576px) {
+		.grid { grid-template-columns: 1fr 1fr }
+		}
+		@media (min-width: 768px) {
+		.grid { grid-template-columns: 1fr 1fr 1fr 1fr }
+		}
+/* Flex */
+		ul {
+			padding: 10px;
+			list-style: none;
+			color: white;
+			background: #749c2c;
+			display: flex;
+			flex-direction: column;
+			}
+			ul li {
+			padding: 5px;
+			}
+		
+			@media (min-width: 576px) {
+				ul {
+				flex-direction: row;
+				justify-content: space-around;
+				}
+				}
+				@media (min-width: 768px) {
+					ul {
+					justify-content: flex-end;
+					}
+					}
+
+/* Formulario */
+					.filtros {
+						text-align: center;
+						display: flex;
+						flex-direction: column;
+						}
+						.filtros div {
+						margin-bottom: 30px;
+						}
+						@media (min-width: 576px) {
+							.filtros {
+							flex-direction: row;
+							justify-content: space-around;
+							}
+							}

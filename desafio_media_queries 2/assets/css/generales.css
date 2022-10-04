@@ -1,0 +1,111 @@
+@charset "UTF-8";
+/* CSS Document */
+ nav {
+     grid-area: menu;
+     background: #e9fff3;
+     color: rgb(46, 46, 46);
+}
+ header {
+     padding: 10px;
+     grid-area: seccion-filtros;
+     background: #f7f7f7;
+     color: rgb(46, 46, 46);
+}
+ main {
+     grid-area: seccion-principal;
+}
+ footer {
+     grid-area: pie-de-pagina;
+     background: #ffc3bf;
+     color: rgb(92, 92, 92);
+     padding: 10px;
+}
+ div {
+     display: grid;
+     grid-template-columns: auto;
+     grid-template-areas: "menu" "seccion-filtros" "seccion-principal" "pie-de-pagina";
+}
+ @media (min-width: 992px) {
+     div{
+         grid-template-columns: auto auto auto auto;
+         grid-template-areas: "menu seccion-filtros seccion-filtros seccion-filtros" "menu seccion-principal seccion-principal seccion-principal"  "pie-de-pagina seccion-principal seccion-principal seccion-principal";
+    }
+}
+ body {
+     color: #121533;
+     font-size: 16px;
+     font-family: 'Source Sans Pro', sans-serif;
+}
+ p {
+     line-height: 1%;
+}
+ .libros {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+}
+ 
+ .button {
+     padding: 0 1rem;
+     height: 2.125rem;
+     text-align: center;
+     vertical-align: middle;
+     border: 1px #d9d9d9 solid;
+     color: #FFF;
+     cursor: pointer;
+     display: inline-block;
+     outline: none;
+     margin: .15625rem;
+     position: relative;
+}
+ .button-primary {
+     background-color: #216962;
+     color: #FFF;
+     border-radius: 40px;
+}
+ .button-primary:hover {
+     background: #7adad0;
+}
+ .button-primary:focus {
+     background: #216962;
+     color: #FFF;
+     box-shadow: none;
+}
+ .seccion-menu {
+     display: flex;
+     padding: 10px;
+     flex-direction: column;
+     align-items: center;
+     min-height: 100vh;
+}
+ .menu-movil{
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+}
+.pie-pagina {
+    display: flex;
+    
+    flex-direction: row;
+    align-items: center;
+    justify-content:center;
+}
+ @media only screen and (min-width: 576px) {
+     .menu-movil {
+         display: none;
+    }
+}
+
+ @media only screen and (max-width: 500px) and (min-width: 341px) {
+     .seccion-menu {
+         display: none;
+    }
+}
+ @media only screen and (max-width: 340px) and (min-width: 5px) {
+     .seccion-menu {
+         display: none;
+    }
+}
+
+
+ 
